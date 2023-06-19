@@ -35,6 +35,16 @@ Originally created by <a href="http://el-ement.com/blog/">Saharan</a> for action
 
 ### Usage ###
 
+Use as ES modules
+
+```javascript
+import * as OIMO from "https://code4fukui.github.io/Oimo.js/build/oimo.module.js";
+```
+or
+```javascript
+import * as OIMO from "https://code4fukui.github.io/Oimo.js/src/Oimo.js";
+```
+
 Download the [minified library](http://lo-th.github.io/Oimo.js/build/oimo.min.js) and include it in your HTML.<br>
 Alternatively, use **Node** and install the [package](https://www.npmjs.com/package/oimo): `npm install oimo`
 
