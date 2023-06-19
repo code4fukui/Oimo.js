@@ -35,7 +35,7 @@ Originally created by <a href="http://el-ement.com/blog/">Saharan</a> for action
 
 ### Usage ###
 
-Use as ES modules
+Use as ES modules (AR supported demo [test_basic.html](https://code4fukui.github.io/Oimo.js/examples/test_basic.html))
 
 ```javascript
 import * as OIMO from "https://code4fukui.github.io/Oimo.js/build/oimo.module.js";
