@@ -9,27 +9,41 @@
 <link rel="shortcut icon" href="./assets/img/favicon.ico">
 <link rel="stylesheet" href="css/demo.css">
 
-<script src="js/demo.js"></script>
-<script src="js/libs/three.min.js"></script>
-<script src="js/controls/OrbitControls.js"></script>
-<script src="../build/oimo.js"></script>
+
+<!-- Import maps polyfill -->
+<!-- Remove this when import maps will be widely supported -->
+<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+
+<script type="importmap">
+{
+	"imports": {
+		"three": "https://code4fukui.github.io/three.js/build/three.module.js",
+		"three/addons/": "https://code4fukui.github.io/three.js/examples/jsm/"
+	}
+}
+</script>
 
 </head>
 <body>
 <canvas id="canvas"></canvas>
 <div id='interface'>
-    <input type="button" value="sphere" onClick=populate(1)>
-    <input type="button" value="box" onClick=populate(2)>
-    <input type="button" value="cylinder" onClick=populate(3)>
-    <input type="button" value="mix" onClick=populate(4)>
+    <input type="button" value="sphere" id="btn1" x-onClick=populate(1)>
+    <input type="button" value="box" id="btn2" x-onClick=populate(2)>
+    <input type="button" value="cylinder" id="btn3" x-onClick=populate(3)>
+    <input type="button" value="mix" id="btn4" x-onClick=populate(4)>
     <input type="number" name="quantity" min="10" max="2000" value="400"  id='MaxNumber'>
-    <input type="submit" onClick=populate()>
-    <input type="number" name="gravity" min="-20" max="20" value="-10" id='gravity' onChange=gravity() >
+    <input type="submit" id="btn" x-onClick=populate()>
+    <input type="number" name="gravity" min="-20" max="20" value="-10" id='gravity' x-onChange=gravity() >
 </div>
 <div id='info'></div>
 <img style="position: absolute; top: 0; right: 0; border: 0;" src="assets/img/ribbon.png"></a>
 <a id="ribbon" href="https://github.com/lo-th/Oimo.js"></a>
-<script>
+<script type="module">
+import * as THREE from "three";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js"; // for PC
+import { demolink } from "./js/demo.js";
+//import * as OIMO from "../build/oimo.module.js";
+import * as OIMO from "../src/Oimo.js";
 
     demolink();
 
@@ -68,7 +82,7 @@
         camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 5000 );
         camera.position.set( 0, 160, 400 );
 
-        controls = new THREE.OrbitControls( camera, canvas );
+        controls = new OrbitControls( camera, canvas );
         controls.target.set(0, 20, 0);
         controls.update();
 
@@ -101,16 +115,25 @@
         }
 
         // background
+        /*
         var buffgeoBack = new THREE.BufferGeometry();
         buffgeoBack.fromGeometry( new THREE.IcosahedronGeometry(3000,2) );
+        var back = new THREE.Mesh( buffgeoBack, new THREE.MeshBasicMaterial( { map:gradTexture([[0.75,0.6,0.4,0.25], ['#1B1D1E','#3D4143','#72797D', '#b0babf']]), side:THREE.BackSide, depthWrite: false, fog:false }  ));
+        */
+        var buffgeoBack = new THREE.IcosahedronGeometry(3000,2);
         var back = new THREE.Mesh( buffgeoBack, new THREE.MeshBasicMaterial( { map:gradTexture([[0.75,0.6,0.4,0.25], ['#1B1D1E','#3D4143','#72797D', '#b0babf']]), side:THREE.BackSide, depthWrite: false, fog:false }  ));
         //back.geometry.applyMatrix(new THREE.Matrix4().makeRotationZ(15*ToRad));
         scene.add( back );
 
         // geometrys
+        /*
         geos['sphere'] = new THREE.BufferGeometry().fromGeometry( new THREE.SphereGeometry(1,16,10));
         geos['box'] = new THREE.BufferGeometry().fromGeometry( new THREE.BoxGeometry(1,1,1));
         geos['cylinder'] = new THREE.BufferGeometry().fromGeometry(new THREE.CylinderGeometry(1,1,1));
+        */
+        geos['sphere'] = new THREE.SphereGeometry(1,16,10);
+        geos['box'] = new THREE.BoxGeometry(1,1,1);
+        geos['cylinder'] = new THREE.CylinderGeometry(1,1,1);
 
         // materials
         mats['sph']    = new THREE[materialType]( {shininess: 10, map: basicTexture(0), name:'sph' } );
@@ -213,6 +236,7 @@
         var i = max;
 
         while (i--){
+            let t;
             if(type===4) t = Math.floor(Math.random()*3)+1;
             else t = type;
             x = -100 + Math.random()*200;
@@ -282,7 +306,7 @@
     }
 
     function gravity(g){
-        nG = document.getElementById("gravity").value
+        const nG = document.getElementById("gravity").value
         world.gravity = new OIMO.Vec3(0, nG, 0);
     }
 
@@ -326,6 +350,13 @@
         tx.needsUpdate = true;
         return tx;
     }
+
+    btn1.onclick = () => populate(1);
+    btn2.onclick = () => populate(2);
+    btn3.onclick = () => populate(3);
+    btn4.onclick = () => populate(4);
+    btn.onclick = () => populate();
+    document.getElementById("gravity").onchange = () => gravity();
 
 </script>
 </body>
