@@ -1,5 +1,5 @@
-import { Proxy } from '../Proxy';
-import { SAPElement } from './SAPElement';
+import { Proxy } from '../Proxy.js';
+import { SAPElement } from './SAPElement.js';
 
 /**
  * A proxy for sweep and prune broad-phase.

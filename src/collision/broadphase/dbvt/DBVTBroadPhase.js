@@ -1,7 +1,7 @@
-import { BR_BOUNDING_VOLUME_TREE } from '../../../constants';
-import { BroadPhase } from '../BroadPhase';
-import { DBVT } from './DBVT';
-import { DBVTProxy } from './DBVTProxy';
+import { BR_BOUNDING_VOLUME_TREE } from '../../../constants.js';
+import { BroadPhase } from '../BroadPhase.js';
+import { DBVT } from './DBVT.js';
+import { DBVTProxy } from './DBVTProxy.js';
 
 /**
  * A broad-phase algorithm using dynamic bounding volume tree.

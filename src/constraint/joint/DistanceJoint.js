@@ -1,9 +1,9 @@
-import { JOINT_DISTANCE } from '../../constants';
-import { Joint } from './Joint';
-import { LimitMotor } from './LimitMotor';
-import { Vec3 } from '../../math/Vec3';
+import { JOINT_DISTANCE } from '../../constants.js';
+import { Joint } from './Joint.js';
+import { LimitMotor } from './LimitMotor.js';
+import { Vec3 } from '../../math/Vec3.js';
 
-import { TranslationalConstraint } from './base/TranslationalConstraint';
+import { TranslationalConstraint } from './base/TranslationalConstraint.js';
 
 
 /**

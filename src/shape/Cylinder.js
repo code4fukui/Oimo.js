@@ -1,7 +1,7 @@
-import { SHAPE_CYLINDER, AABB_PROX } from '../constants';
-import { Shape } from './Shape';
-import { _Math } from '../math/Math';
-import { Vec3 } from '../math/Vec3';
+import { SHAPE_CYLINDER, AABB_PROX } from '../constants.js';
+import { Shape } from './Shape.js';
+import { _Math } from '../math/Math.js';
+import { Vec3 } from '../math/Vec3.js';
 
 /**
  * Cylinder shape

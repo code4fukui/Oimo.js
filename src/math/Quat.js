@@ -1,5 +1,5 @@
-import { _Math } from './Math';
-import { Vec3 } from './Vec3';
+import { _Math } from './Math.js';
+import { Vec3 } from './Vec3.js';
 
 function Quat ( x, y, z, w ){
 

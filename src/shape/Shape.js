@@ -1,9 +1,9 @@
-import { SHAPE_NULL } from '../constants';
-import { printError } from '../core/Utils';
-import { _Math } from '../math/Math';
-import { Vec3 } from '../math/Vec3';
-import { Mat33 } from '../math/Mat33';
-import { AABB } from '../math/AABB';
+import { SHAPE_NULL } from '../constants.js';
+import { printError } from '../core/Utils.js';
+import { _Math } from '../math/Math.js';
+import { Vec3 } from '../math/Vec3.js';
+import { Mat33 } from '../math/Mat33.js';
+import { AABB } from '../math/AABB.js';
 
 var count = 0;
 function ShapeIdCount() { return count++; }

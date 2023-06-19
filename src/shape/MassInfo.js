@@ -1,4 +1,4 @@
-import { Mat33 } from '../math/Mat33';
+import { Mat33 } from '../math/Mat33.js';
 
 /**
  * This class holds mass information of a shape.

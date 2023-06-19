@@ -1,5 +1,5 @@
-import { _Math } from '../../../math/Math';
-import { Mat33 } from '../../../math/Mat33';
+import { _Math } from '../../../math/Math.js';
+import { Mat33 } from '../../../math/Mat33.js';
 
 /**
 * A linear constraint for all axes for various joints.

@@ -1,13 +1,13 @@
-import { JOINT_HINGE } from '../../constants';
-import { Joint } from './Joint';
-import { LimitMotor } from './LimitMotor';
-import { Vec3 } from '../../math/Vec3';
-import { Quat } from '../../math/Quat';
-import { Mat33 } from '../../math/Mat33';
-import { _Math } from '../../math/Math';
+import { JOINT_HINGE } from '../../constants.js';
+import { Joint } from './Joint.js';
+import { LimitMotor } from './LimitMotor.js';
+import { Vec3 } from '../../math/Vec3.js';
+import { Quat } from '../../math/Quat.js';
+import { Mat33 } from '../../math/Mat33.js';
+import { _Math } from '../../math/Math.js';
 
-import { LinearConstraint } from './base/LinearConstraint';
-import { Rotational3Constraint } from './base/Rotational3Constraint';
+import { LinearConstraint } from './base/LinearConstraint.js';
+import { Rotational3Constraint } from './base/Rotational3Constraint.js';
 
 /**
  * A hinge joint allows only for relative rotation of rigid bodies along the axis.

@@ -1,7 +1,7 @@
-import { JOINT_NULL } from '../../constants';
-import { Constraint } from '../Constraint';
-import { JointLink } from './JointLink';
-import { Vec3 } from '../../math/Vec3';
+import { JOINT_NULL } from '../../constants.js';
+import { Constraint } from '../Constraint.js';
+import { JointLink } from './JointLink.js';
+import { Vec3 } from '../../math/Vec3.js';
 
 /**
  * Joints are used to constrain the motion between two rigid bodies.

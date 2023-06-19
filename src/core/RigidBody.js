@@ -1,14 +1,14 @@
-import { BODY_NULL, BODY_DYNAMIC, BODY_STATIC } from '../constants';
-import { printError } from './Utils';
+import { BODY_NULL, BODY_DYNAMIC, BODY_STATIC } from '../constants.js';
+import { printError } from './Utils.js';
 
-import { MassInfo } from '../shape/MassInfo';
+import { MassInfo } from '../shape/MassInfo.js';
 
-import { _Math } from '../math/Math';
-import { Mat33 } from '../math/Mat33';
-import { Quat } from '../math/Quat';
-import { Vec3 } from '../math/Vec3';
+import { _Math } from '../math/Math.js';
+import { Mat33 } from '../math/Mat33.js';
+import { Quat } from '../math/Quat.js';
+import { Vec3 } from '../math/Vec3.js';
 
-import { Contact } from '../constraint/contact/Contact';
+import { Contact } from '../constraint/contact/Contact.js';
 
 
 /**

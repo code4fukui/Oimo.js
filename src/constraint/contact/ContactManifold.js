@@ -1,5 +1,5 @@
-import { ManifoldPoint } from './ManifoldPoint';
-import { Vec3 } from '../../math/Vec3';
+import { ManifoldPoint } from './ManifoldPoint.js';
+import { Vec3 } from '../../math/Vec3.js';
 
 /**
 * A contact manifold between two shapes.

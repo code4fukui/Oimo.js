@@ -1,12 +1,12 @@
-import { JOINT_PRISMATIC } from '../../constants';
-import { Joint } from './Joint';
-import { LimitMotor } from './LimitMotor';
-import { Vec3 } from '../../math/Vec3';
-import { Quat } from '../../math/Quat';
-import { _Math } from '../../math/Math';
+import { JOINT_PRISMATIC } from '../../constants.js';
+import { Joint } from './Joint.js';
+import { LimitMotor } from './LimitMotor.js';
+import { Vec3 } from '../../math/Vec3.js';
+import { Quat } from '../../math/Quat.js';
+import { _Math } from '../../math/Math.js';
 
-import { AngularConstraint } from './base/AngularConstraint';
-import { Translational3Constraint } from './base/Translational3Constraint';
+import { AngularConstraint } from './base/AngularConstraint.js';
+import { Translational3Constraint } from './base/Translational3Constraint.js';
 
 
 /**

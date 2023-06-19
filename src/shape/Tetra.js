@@ -1,5 +1,5 @@
-import { SHAPE_TETRA, AABB_PROX } from '../constants';
-import { Shape } from './Shape';
+import { SHAPE_TETRA, AABB_PROX } from '../constants.js';
+import { Shape } from './Shape.js';
 
 /**
  * A tetra shape.

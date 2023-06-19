@@ -1,5 +1,5 @@
-import { Proxy } from '../Proxy';
-import { DBVTNode } from './DBVTNode';
+import { Proxy } from '../Proxy.js';
+import { DBVTNode } from './DBVTNode.js';
 
 /**
 * A proxy for dynamic bounding volume tree broad-phase.

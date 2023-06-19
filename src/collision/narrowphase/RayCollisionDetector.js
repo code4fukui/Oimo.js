@@ -1,6 +1,6 @@
-import { CollisionDetector } from './CollisionDetector';
-import { _Math } from '../../math/Math';
-import { Vec3 } from '../../math/Vec3';
+import { CollisionDetector } from './CollisionDetector.js';
+import { _Math } from '../../math/Math.js';
+import { Vec3 } from '../../math/Vec3.js';
 
 /**
  * Class for collision detection based on

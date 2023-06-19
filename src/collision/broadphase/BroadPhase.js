@@ -1,6 +1,6 @@
-import { BR_NULL } from '../../constants';
-import { printError } from '../../core/Utils';
-import { Pair } from './Pair';
+import { BR_NULL } from '../../constants.js';
+import { printError } from '../../core/Utils.js';
+import { Pair } from './Pair.js';
 
 /**
 * The broad-phase is used for collecting all possible pairs for collision.

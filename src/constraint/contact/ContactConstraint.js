@@ -1,7 +1,7 @@
-import { Constraint } from '../Constraint';
-import { ContactPointDataBuffer } from './ContactPointDataBuffer';
-import { Vec3 } from '../../math/Vec3';
-import { _Math } from '../../math/Math';
+import { Constraint } from '../Constraint.js';
+import { ContactPointDataBuffer } from './ContactPointDataBuffer.js';
+import { Vec3 } from '../../math/Vec3.js';
+import { _Math } from '../../math/Math.js';
 
 /**
 * ...

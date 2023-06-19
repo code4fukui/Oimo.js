@@ -1,13 +1,13 @@
-import { JOINT_SLIDER } from '../../constants';
-import { Joint } from './Joint';
-import { LimitMotor } from './LimitMotor';
-import { Vec3 } from '../../math/Vec3';
-import { Quat } from '../../math/Quat';
-import { Mat33 } from '../../math/Mat33';
-import { _Math } from '../../math/Math';
+import { JOINT_SLIDER } from '../../constants.js';
+import { Joint } from './Joint.js';
+import { LimitMotor } from './LimitMotor.js';
+import { Vec3 } from '../../math/Vec3.js';
+import { Quat } from '../../math/Quat.js';
+import { Mat33 } from '../../math/Mat33.js';
+import { _Math } from '../../math/Math.js';
 
-import { Rotational3Constraint } from './base/Rotational3Constraint';
-import { Translational3Constraint } from './base/Translational3Constraint';
+import { Rotational3Constraint } from './base/Rotational3Constraint.js';
+import { Translational3Constraint } from './base/Translational3Constraint.js';
 
 
 /**

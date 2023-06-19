@@ -1,6 +1,6 @@
-import { SHAPE_BOX, AABB_PROX } from '../constants';
-import { Shape } from './Shape';
-import { Vec3 } from '../math/Vec3';
+import { SHAPE_BOX, AABB_PROX } from '../constants.js';
+import { Shape } from './Shape.js';
+import { Vec3 } from '../math/Vec3.js';
 
 
 /**

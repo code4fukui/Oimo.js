@@ -1,5 +1,5 @@
-import { printError } from '../core/Utils';
-import { Vec3 } from '../math/Vec3';
+import { printError } from '../core/Utils.js';
+import { Vec3 } from '../math/Vec3.js';
 
 /**
  * The base class of all type of the constraints.

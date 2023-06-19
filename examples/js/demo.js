@@ -1,5 +1,5 @@
 
-function demolink (){
+export function demolink (){
 
     var demolink = document.createElement('div');
     demolink.className = 'link';

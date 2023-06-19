@@ -1,4 +1,4 @@
-import { _Math } from '../../../math/Math';
+import { _Math } from '../../../math/Math.js';
 
 /**
  * A projection axis for sweep and prune broad-phase.

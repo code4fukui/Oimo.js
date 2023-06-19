@@ -1,6 +1,6 @@
-import { JOINT_BALL_AND_SOCKET } from '../../constants';
-import { Joint } from './Joint';
-import { LinearConstraint } from './base/LinearConstraint';
+import { JOINT_BALL_AND_SOCKET } from '../../constants.js';
+import { Joint } from './Joint.js';
+import { LinearConstraint } from './base/LinearConstraint.js';
 
 /**
  * A ball-and-socket joint limits relative translation on two anchor points on rigid bodies.

@@ -1,8 +1,8 @@
-import { ContactLink } from './ContactLink';
-import { ImpulseDataBuffer } from './ImpulseDataBuffer';
-import { ContactManifold } from './ContactManifold';
-import { ContactConstraint } from './ContactConstraint';
-import { _Math } from '../../math/Math';
+import { ContactLink } from './ContactLink.js';
+import { ImpulseDataBuffer } from './ImpulseDataBuffer.js';
+import { ContactManifold } from './ContactManifold.js';
+import { ContactConstraint } from './ContactConstraint.js';
+import { _Math } from '../../math/Math.js';
 /**
 * A contact is a pair of shapes whose axis-aligned bounding boxes are overlapping.
 * @author saharan

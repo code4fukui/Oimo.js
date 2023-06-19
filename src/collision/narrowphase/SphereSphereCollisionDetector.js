@@ -1,5 +1,5 @@
-import { CollisionDetector } from './CollisionDetector';
-import { _Math } from '../../math/Math';
+import { CollisionDetector } from './CollisionDetector.js';
+import { _Math } from '../../math/Math.js';
 
 /**
  * A collision detector which detects collisions between two spheres.

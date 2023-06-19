@@ -1,6 +1,6 @@
-import { SHAPE_SPHERE, AABB_PROX } from '../constants';
-import { Shape } from './Shape';
-import { _Math } from '../math/Math';
+import { SHAPE_SPHERE, AABB_PROX } from '../constants.js';
+import { Shape } from './Shape.js';
+import { _Math } from '../math/Math.js';
 
 /**
  * Sphere shape

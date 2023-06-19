@@ -1,5 +1,5 @@
-import { AABB } from '../../../math/AABB';
-import { DBVTNode } from './DBVTNode';
+import { AABB } from '../../../math/AABB.js';
+import { DBVTNode } from './DBVTNode.js';
 
 /**
  * A dynamic bounding volume tree for the broad-phase algorithm.

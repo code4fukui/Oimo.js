@@ -1,6 +1,6 @@
-import { Vec3 } from '../../../math/Vec3';
-import { Quat } from '../../../math/Quat';
-import { Mat33 } from '../../../math/Mat33';
+import { Vec3 } from '../../../math/Vec3.js';
+import { Quat } from '../../../math/Quat.js';
+import { Mat33 } from '../../../math/Mat33.js';
 
 /**
 * An angular constraint for all axes for various joints.

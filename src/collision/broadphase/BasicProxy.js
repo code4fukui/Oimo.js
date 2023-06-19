@@ -1,4 +1,4 @@
-import { Proxy, ProxyIdCount } from './Proxy';
+import { Proxy, ProxyIdCount } from './Proxy.js';
 
 /**
 * A basic implementation of proxies.

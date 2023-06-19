@@ -1,6 +1,6 @@
-import { BR_BRUTE_FORCE } from '../../constants';
-import { BroadPhase } from './BroadPhase';
-import { BasicProxy } from './BasicProxy';
+import { BR_BRUTE_FORCE } from '../../constants.js';
+import { BroadPhase } from './BroadPhase.js';
+import { BasicProxy } from './BasicProxy.js';
 
 /**
 * A broad-phase algorithm with brute-force search.

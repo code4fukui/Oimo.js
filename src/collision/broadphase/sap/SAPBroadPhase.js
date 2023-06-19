@@ -1,7 +1,7 @@
-import { BR_SWEEP_AND_PRUNE } from '../../../constants';
-import { BroadPhase } from '../BroadPhase';
-import { SAPAxis } from './SAPAxis';
-import { SAPProxy } from './SAPProxy';
+import { BR_SWEEP_AND_PRUNE } from '../../../constants.js';
+import { BroadPhase } from '../BroadPhase.js';
+import { SAPAxis } from './SAPAxis.js';
+import { SAPProxy } from './SAPProxy.js';
 
 /**
  * A broad-phase collision detection algorithm using sweep and prune.

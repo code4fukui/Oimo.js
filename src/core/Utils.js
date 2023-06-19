@@ -1,5 +1,5 @@
-import { _Math } from '../math/Math';
-import { REVISION } from '../constants';
+import { _Math } from '../math/Math.js';
+import { REVISION } from '../constants.js';
 
 
 function printError( clazz, msg ){

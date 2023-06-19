@@ -1,43 +1,43 @@
-import { SHAPE_BOX, SHAPE_SPHERE, SHAPE_CYLINDER, SHAPE_PLANE, BODY_DYNAMIC, BODY_STATIC } from '../constants';
-import { InfoDisplay, printError } from './Utils';
+import { SHAPE_BOX, SHAPE_SPHERE, SHAPE_CYLINDER, SHAPE_PLANE, BODY_DYNAMIC, BODY_STATIC } from '../constants.js';
+import { InfoDisplay, printError } from './Utils.js';
 
 
-import { BruteForceBroadPhase } from '../collision/broadphase/BruteForceBroadPhase';
-import { SAPBroadPhase } from '../collision/broadphase/sap/SAPBroadPhase';
-import { DBVTBroadPhase } from '../collision/broadphase/dbvt/DBVTBroadPhase';
+import { BruteForceBroadPhase } from '../collision/broadphase/BruteForceBroadPhase.js';
+import { SAPBroadPhase } from '../collision/broadphase/sap/SAPBroadPhase.js';
+import { DBVTBroadPhase } from '../collision/broadphase/dbvt/DBVTBroadPhase.js';
 
-import { BoxBoxCollisionDetector } from '../collision/narrowphase/BoxBoxCollisionDetector';
-import { BoxCylinderCollisionDetector } from '../collision/narrowphase/BoxCylinderCollisionDetector';
-import { CylinderCylinderCollisionDetector } from '../collision/narrowphase/CylinderCylinderCollisionDetector';
-import { SphereBoxCollisionDetector } from '../collision/narrowphase/SphereBoxCollisionDetector';
-import { SphereCylinderCollisionDetector } from '../collision/narrowphase/SphereCylinderCollisionDetector';
-import { SphereSphereCollisionDetector } from '../collision/narrowphase/SphereSphereCollisionDetector';
-import { SpherePlaneCollisionDetector } from '../collision/narrowphase/SpherePlaneCollisionDetector_X';
-import { BoxPlaneCollisionDetector } from '../collision/narrowphase/BoxPlaneCollisionDetector_X';
+import { BoxBoxCollisionDetector } from '../collision/narrowphase/BoxBoxCollisionDetector.js';
+import { BoxCylinderCollisionDetector } from '../collision/narrowphase/BoxCylinderCollisionDetector.js';
+import { CylinderCylinderCollisionDetector } from '../collision/narrowphase/CylinderCylinderCollisionDetector.js';
+import { SphereBoxCollisionDetector } from '../collision/narrowphase/SphereBoxCollisionDetector.js';
+import { SphereCylinderCollisionDetector } from '../collision/narrowphase/SphereCylinderCollisionDetector.js';
+import { SphereSphereCollisionDetector } from '../collision/narrowphase/SphereSphereCollisionDetector.js';
+import { SpherePlaneCollisionDetector } from '../collision/narrowphase/SpherePlaneCollisionDetector_X.js';
+import { BoxPlaneCollisionDetector } from '../collision/narrowphase/BoxPlaneCollisionDetector_X.js';
 
-import { _Math } from '../math/Math';
-import { Mat33 } from '../math/Mat33';
-import { Quat } from '../math/Quat';
-import { Vec3 } from '../math/Vec3';
+import { _Math } from '../math/Math.js';
+import { Mat33 } from '../math/Mat33.js';
+import { Quat } from '../math/Quat.js';
+import { Vec3 } from '../math/Vec3.js';
 
-import { ShapeConfig } from '../shape/ShapeConfig';
-import { Box } from '../shape/Box';
-import { Sphere } from '../shape/Sphere';
-import { Cylinder } from '../shape/Cylinder';
-import { Plane } from '../shape/Plane';
-//import { TetraShape } from '../collision/shape/TetraShape';
+import { ShapeConfig } from '../shape/ShapeConfig.js';
+import { Box } from '../shape/Box.js';
+import { Sphere } from '../shape/Sphere.js';
+import { Cylinder } from '../shape/Cylinder.js';
+import { Plane } from '../shape/Plane.js';
+//import { TetraShape } from '../collision/shape/TetraShape.js';
 
-import { Contact } from '../constraint/contact/Contact';
+import { Contact } from '../constraint/contact/Contact.js';
 
-import { JointConfig } from '../constraint/joint/JointConfig';
-import { HingeJoint } from '../constraint/joint/HingeJoint';
-import { BallAndSocketJoint } from '../constraint/joint/BallAndSocketJoint';
-import { DistanceJoint } from '../constraint/joint/DistanceJoint';
-import { PrismaticJoint } from '../constraint/joint/PrismaticJoint';
-import { SliderJoint } from '../constraint/joint/SliderJoint';
-import { WheelJoint } from '../constraint/joint/WheelJoint';
+import { JointConfig } from '../constraint/joint/JointConfig.js';
+import { HingeJoint } from '../constraint/joint/HingeJoint.js';
+import { BallAndSocketJoint } from '../constraint/joint/BallAndSocketJoint.js';
+import { DistanceJoint } from '../constraint/joint/DistanceJoint.js';
+import { PrismaticJoint } from '../constraint/joint/PrismaticJoint.js';
+import { SliderJoint } from '../constraint/joint/SliderJoint.js';
+import { WheelJoint } from '../constraint/joint/WheelJoint.js';
 
-import { RigidBody } from './RigidBody';
+import { RigidBody } from './RigidBody.js';
 
 /**
  * The class of physical computing world.
@@ -192,7 +192,7 @@ Object.assign( World.prototype, {
 
     getInfo: function () {
 
-        return this.isStat ? this.performance.show() : '';
+        return this.isStat ? this.performance.show() : '.js';
 
     },
 
@@ -414,8 +414,8 @@ Object.assign( World.prototype, {
         var n1, n2;
         var contact = this.contacts;
         while(contact!==null){
-            n1 = contact.body1.name || ' ';
-            n2 = contact.body2.name || ' ';
+            n1 = contact.body1.name || ' .js';
+            n2 = contact.body2.name || ' .js';
             if((n1==name1 && n2==name2) || (n2==name1 && n1==name2)){ if(contact.touching) return true; else return false;}
             else contact = contact.next;
         }
@@ -972,7 +972,7 @@ Object.assign( World.prototype, {
             break;
         }
 
-        joint.name = o.name || '';
+        joint.name = o.name || '.js';
         // finaly add to physics world
         this.addJoint( joint );
 
