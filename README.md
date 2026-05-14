@@ -1,26 +1,10 @@
-<p align="center"><a href="http://lo-th.github.io/Oimo.js/"><img src="http://lo-th.github.io/Oimo.js/examples/assets/img/logo.png"/></a><br>
-Oimo.js is a lightweight 3d physics engine for JavaScript.<br>
-It's a full javascript conversion of <a href="https://github.com/saharan/OimoPhysics/">OimoPhysics</a><br>
-Originally created by <a href="http://el-ement.com/blog/">Saharan</a> for actionscript 3.0.
-<br>
-<a href="https://www.npmjs.com/package/oimo">
-  <img src="https://img.shields.io/npm/v/oimo.svg" alt="Version">
-</a>
+# Oimo.js
 
-<a href="https://cdnjs.com/libraries/oimo">
-  <img src="https://img.shields.io/cdnjs/v/oimo.svg" alt="Version">
-</a>
-</p>
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
 
-### Home ###
+Oimo.js is a lightweight 3D physics engine for JavaScript. It's a full JavaScript conversion of [OimoPhysics](https://github.com/saharan/OimoPhysics/) originally created by [Saharan](http://el-ement.com/blog/) for ActionScript 3.0.
 
-- [oimo.js](http://lo-th.github.io/Oimo.js/index.html) (in progress)
-
-### Docs ###
-
-- [docs](http://lo-th.github.io/Oimo.js/docs.html) (in progress)
-
-### Demo ###
+## Demo
 
 - [Basic test](http://lo-th.github.io/Oimo.js/examples/test_basic.html)
 - [Compound test (chair)](http://lo-th.github.io/Oimo.js/examples/test_compound.html)
@@ -33,9 +17,21 @@ Originally created by <a href="http://el-ement.com/blog/">Saharan</a> for action
 - [Walker test](http://lo-th.github.io/Oimo.js/examples/test_walker.html)
 - [Worker test](http://lo-th.github.io/Oimo.js/examples/test_worker.html)
 
-### Usage ###
+## Features
 
-Use as ES modules (AR supported demo [test_basic.html](https://code4fukui.github.io/Oimo.js/examples/test_basic.html))
+- Lightweight and fast 3D physics engine
+- Supports various collision shapes: sphere, box, cylinder, plane, particle
+- Provides joint types: distance, ball-and-socket, hinge, wheel, slider, prismatic
+- Enables multi-threading with Web Workers
+- Includes built-in performance monitoring
+
+## Requirements
+
+Oimo.js requires a modern browser supporting JavaScript ES6.
+
+## Usage
+
+Use as ES modules:
 
 ```javascript
 import * as OIMO from "https://code4fukui.github.io/Oimo.js/build/oimo.module.js";
@@ -45,67 +41,20 @@ or
 import * as OIMO from "https://code4fukui.github.io/Oimo.js/src/Oimo.js";
 ```
 
-Download the [minified library](http://lo-th.github.io/Oimo.js/build/oimo.min.js) and include it in your HTML.<br>
-Alternatively, use **Node** and install the [package](https://www.npmjs.com/package/oimo): `npm install oimo`
+Alternatively, download the [minified library](http://lo-th.github.io/Oimo.js/build/oimo.min.js) and include it in your HTML:
 
 ```html
 <script src="js/oimo.min.js"></script>
 ```
 
-Create physics world:
+You can also install the [npm package](https://www.npmjs.com/package/oimo):
 
-```javascript
-world = new OIMO.World({ 
-    timestep: 1/60, 
-    iterations: 8, 
-    broadphase: 2, // 1 brute force, 2 sweep and prune, 3 volume tree
-    worldscale: 1, // scale full world 
-    random: true,  // randomize sample
-    info: false,   // calculate statistic or not
-    gravity: [0,-9.8,0] 
-});
+```
+npm install oimo
 ```
 
-Add physics object or joint
+See the [documentation](http://lo-th.github.io/Oimo.js/docs.html) for more details on usage.
 
-```javascript
-var body = world.add({ 
-    type:'sphere', // type of shape : sphere, box, cylinder 
-    size:[1,1,1], // size of shape
-    pos:[0,0,0], // start position in degree
-    rot:[0,0,90], // start rotation in degree
-    move:true, // dynamic or statique
-    density: 1,
-    friction: 0.2,
-    restitution: 0.2,
-    belongsTo: 1, // The bits of the collision groups to which the shape belongs.
-    collidesWith: 0xffffffff // The bits of the collision groups with which the shape collides.
-});
+## License
 
-var body = world.add({ 
-    type:'jointHinge', // type of joint : jointDistance, jointHinge, jointPrisme, jointSlide, jointWheel
-    body1: "b1", // name or id of attach rigidbody
-    body2: "b1" // name or id of attach rigidbody
-});
-
-
-// update world
-world.step();
-
-// and copy position and rotation to three mesh
-myMesh.position.copy( body.getPosition() );
-myMesh.quaternion.copy( body.getQuaternion() );
-```
-
-### Note ###
-
-Oimo Physics uses international system units: 0.1 to 10 meters max for dynamic body.<br>
-In basic demo with THREE, I scaled all by 100 so objects are between 10 to 1000 in THREE units.<br><br>
-
-/!\ Shape name change in last version <br>
-SphereShape to Sphere, BoxShape to Box, CylinderShape to Cylinder <br>
-
-### UPDATE ###
-
-Is time to switch ES6 worker version with the last OimoPhysics 1.2.2 :)<br>
-go to new [PHY repro](https://github.com/lo-th/phy)
+MIT License — see [LICENSE](LICENSE).
